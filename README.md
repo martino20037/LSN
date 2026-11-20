@@ -1,2 +1,2 @@
-![Simulazione](lecture4/lecture4_1/simulazione.gif)
+![Simulazione](lecture4/Lecture4_1/simulazione.gif)
 
