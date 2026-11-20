@@ -1,1 +1,1 @@
-![Simulazione](simulazione.gif)
+
