@@ -1,0 +1,2 @@
+![Simulazione](simulazione.gif).
+
