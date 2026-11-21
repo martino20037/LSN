@@ -169,9 +169,9 @@ passi.clear();
      for(int k=1 ; k<= s ; k++){
 
    
-        double cos_theta = 1.0 - 2.0 * rnd.Rannyu(); 
-        double theta = acos(cos_theta);             
-       double phi = 2.0 * M_PI * rnd.Rannyu();  
+        double cos_theta = 1.0 - 2.0 * rnd.Rannyu(); // campiono cos(theta) tra -1 e 1
+        double theta = acos(cos_theta); // ricavo theta      
+       double phi = 2.0 * M_PI * rnd.Rannyu(); // campiono phi tra o e 2Pi
         
          x[k]=x[k-1]+ sin(theta)*cos(phi) ;
          y[k]=y[k-1]+ sin(theta)*sin(phi);
