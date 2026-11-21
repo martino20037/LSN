@@ -57,7 +57,7 @@ for (int i=1;i<14 ;i++){
    intervalli[i]= intervalli[i-1]+1.0; // creo un vettore per gli intervalli 
 }  
 
-// utilizzo due volte la funzione unif per generare un punto x_0 e y_0 e poi genero l'angolo theta e trovo il mio vettore casuale ( lo moltiplico per 0.7)
+// utilizzo una volta la funzione unif per generare un punto  y_0 e poi genero l'angolo theta e trovo il mio vettore casuale 
 
 double y_0;  
 double theta; 
