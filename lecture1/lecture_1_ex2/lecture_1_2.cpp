@@ -10,7 +10,7 @@
 
 using namespace std;
 
-int unif(double);
+
 double exponential(double);
 double Lorentzian(double);
 double Rayleigh(double );
@@ -63,7 +63,7 @@ for(int j = 0; j < Ncampioni; j++){
             double S = 0;
 
 for(int i=0 ; i< ausiliare; i++){
-   S += (double)unif(rnd.Rannyu());
+   S += rnd.Rannyu();
 
 }S /= ausiliare;  // media
             out << S << " ";
@@ -161,10 +161,6 @@ out3.close();
 
 
 
-int unif(double y){
-   return int(y * 6) + 1;
-
-}
 
 double exponential(double y){
 
