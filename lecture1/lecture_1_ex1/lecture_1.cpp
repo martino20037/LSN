@@ -163,21 +163,23 @@ std::vector<double> intervalli(sottointervalli+1,0.0); // aggiungo 1 se no mi pe
 std::vector<double> conta_punti(sottointervalli,0.0); 
 std::vector<double> chi_2(500,0.0);
 
+ // costruzione intervalli 
 for(int i=1 ; i<=sottointervalli ; i++){
     intervalli[i] = intervalli[i-1] + (double)(1.0/sottointervalli); 
 }
 
 for(int s=0 ; s<500 ; s++){
+ // azzero il vettore a ogni ciclo
     fill(conta_punti.begin(), conta_punti.end(), 0.0);
 
     for(int i=0; i<100000 ; i++){
         double random = rnd.Rannyu();
-        // Calcolo immediato del bin senza loop k
+        // Calcolo del bin moltiplicando numero random* num_sott_intervalli e con il cas ottengo l'intero corrispondente
         int bin = int(random * sottointervalli); 
-        if(bin >= sottointervalli) bin = sottointervalli - 1; // Protezione per 1.0
+        if(bin >= sottointervalli) bin = sottointervalli - 1; // Protezione nel caso Rand=1 o se cast int dia 100
         conta_punti[bin] += 1.0;
     }
-
+   // caloclo chi^2
     chi_2[s] = chi_quadro(conta_punti.data(), sottointervalli, 100000);
 }
 // stampo i risultati
