@@ -53,9 +53,9 @@ int blocco_dim = M / number_blocchi;
 int N_temp = 400;                  // Numero di temperature
 int passi_metro = 20;             // Mosse SA per ogni temperatura
    
-double T0 = 1.0, Tf = 1e-2;       // initial / final temperature
+double T0 = 1.0, Tf = 1e-2;       // temperatura initiale / finale
 double T = T0;
-double alpha = pow(Tf / T0, 1.0 / (N_temp - 1));   // ≈ 0.988
+double alpha = pow(Tf / T0, 1.0 / (N_temp - 1));   // legge per \alpha ≈ 0.988
 
 double sigma = 0.8;
 double mu = 0.8;
